@@ -8,8 +8,6 @@ RUN pip install pip setuptools --upgrade
 
 RUN pip install scanapi
 
-COPY . /app
+ENTRYPOINT ["/entrypoint.sh"]
 
-WORKDIR /app
-
-CMD ["scanapi"]
+COPY entrypoint.sh /entrypoint.sh
