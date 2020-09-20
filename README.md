@@ -1,4 +1,4 @@
-# scanapi
+# ScanaAPI
 An action that allows developers to run ScanAPI using github actions.
 
 ## Inputs
