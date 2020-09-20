@@ -1,0 +1,16 @@
+name: 'Run ScanAPI action'
+author: '@scanapi'
+description: 'Allows any developer to run ScanAPI using github actions'
+branding:
+  icon: 'align-justify'
+  color: 'gray-dark'
+inputs:
+  arguments:
+    description: 'Desired arguments to run scanapi. Allow multiple parameters separated by spaces.'
+    required: true
+    default: '--help'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.arguments }}
