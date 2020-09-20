@@ -2,4 +2,4 @@
 
 set -e
 
-scanapi "$@"
+sh -c "scanapi $*"

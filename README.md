@@ -36,5 +36,5 @@ jobs:
     - name: Run automated API tests
       uses: scanapi/scanapi@v1
       with:
-        arguments: 'scanapi.yml' 
+        args: 'scanapi.yml'
 ```
