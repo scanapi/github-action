@@ -13,7 +13,7 @@ The following will take the yaml file and produce a scanapi-report.html file as 
 
 ```yaml
 - name: Run automated API tests
-  uses: scanapi/scanapi@v1
+  uses: scanapi/github-action@v1
   with:
     arguments: 'scanapi.yaml'
 ```
@@ -29,12 +29,17 @@ on:
     types: [opened, synchronize]:
 
 jobs:
-  Test:
+  scanapi:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Run automated API tests
-      uses: scanapi/scanapi@v1
-      with:
-        args: 'scanapi.yml'
+      - uses: actions/checkout@master
+      - name: Run automated API tests
+        uses: scanapi/github-action@v1
+        with:
+          arguments: "run ./scanapi.yaml"
+      - name: Upload scanapi-report.html
+        uses: actions/upload-artifact@v2
+        with:
+          name: ScanAPI Report
+          path: scanapi-report.html
 ```
