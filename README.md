@@ -7,7 +7,7 @@ An action that allows developers to run ScanAPI using github actions.
 
 ### `scanapi_version`
 
-Default version of scanapi to install.
+The version of ScanAPI to install (default: latest).
 
 ### `arguments`
 
@@ -21,7 +21,7 @@ The following will take the yaml file and produce a scanapi-report.html file as 
 - name: Run automated API tests
   uses: scanapi/github-action@v1
   with:
-    scanapi_version: '==2.0.0'
+    scanapi_version: '2.0.0'
     arguments: 'run ./scanapi.yaml'
 ```
 
