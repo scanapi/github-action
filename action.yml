@@ -7,7 +7,7 @@ branding:
 inputs:
   scanapi_version:
       description: 'The ScanAPI version to be installed'
-      required: true
+      required: false
       default: 'latest'
   arguments:
     description: "Desired arguments to run ScanAPI. Allow multiple parameters separated by spaces."
