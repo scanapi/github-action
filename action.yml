@@ -5,6 +5,10 @@ branding:
   icon: "align-justify"
   color: "gray-dark"
 inputs:
+  scanapi_version:
+      description: 'The ScanAPI version to be installed'
+      required: false
+      default: 'latest'
   arguments:
     description: "Desired arguments to run ScanAPI. Allow multiple parameters separated by spaces."
     required: true
@@ -13,4 +17,5 @@ runs:
   using: "docker"
   image: "Dockerfile"
   args:
+    - ${{ inputs.scanapi_version }}
     - ${{ inputs.arguments }}
