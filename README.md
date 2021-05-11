@@ -1,4 +1,4 @@
-![](https://github.com/scanapi/design/raw/master/images/github-hero-dark.png)
+![](https://github.com/scanapi/design/raw/main/images/github-hero-dark.png)
 
 # ScanaAPI
 An action that allows developers to run ScanAPI using github actions.
